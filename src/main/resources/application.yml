@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: ItsPartner-Test
+  profiles:
+    active: ${SPRING_PROFILE}
+  sql:
+    init:
+      mode: always
+
+
+server:
+  port: 8081
