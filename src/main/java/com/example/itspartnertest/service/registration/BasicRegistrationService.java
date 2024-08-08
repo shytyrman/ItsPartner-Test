@@ -4,7 +4,7 @@ import com.example.itspartnertest.appuser.AppUser;
 import com.example.itspartnertest.appuser.AppUserRepository;
 import com.example.itspartnertest.appuser.AppUserRole;
 import com.example.itspartnertest.model.dto.RegistrationRequest;
-import com.example.itspartnertest.service.mapper.RegistrationRequestToAppUser;
+import com.example.itspartnertest.service.registration.mapper.RegistrationRequestToAppUser;
 import lombok.AllArgsConstructor;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;

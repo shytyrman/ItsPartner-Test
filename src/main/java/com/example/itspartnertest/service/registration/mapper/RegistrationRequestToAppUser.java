@@ -1,4 +1,4 @@
-package com.example.itspartnertest.service.mapper;
+package com.example.itspartnertest.service.registration.mapper;
 
 import com.example.itspartnertest.appuser.AppUser;
 import com.example.itspartnertest.model.dto.RegistrationRequest;
