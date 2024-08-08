@@ -1,5 +1,6 @@
 package com.example.itspartnertest.model;
 
+import com.example.itspartnertest.model.enums.UserLocationPermission;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
@@ -15,4 +16,5 @@ public class UserLocation {
     private Long userId;
     @Column(value = "location_id")
     private Long locationId;
+    private UserLocationPermission permission;
 }

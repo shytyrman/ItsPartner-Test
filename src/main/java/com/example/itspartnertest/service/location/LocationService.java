@@ -11,4 +11,6 @@ public interface LocationService {
     Flux<Location> getUserLocationList(Long userId);
 
     Flux<Location> getAllLocations();
+
+    Flux<AppUser> getUsersWithLocation(Long locationId);
 }

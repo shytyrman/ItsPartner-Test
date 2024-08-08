@@ -1,4 +1,4 @@
-package com.example.itspartnertest.controller.registration;
+package com.example.itspartnertest.controller.location;
 
 import com.example.itspartnertest.appuser.AppUser;
 import com.example.itspartnertest.appuser.AppUserRepository;
@@ -21,16 +21,6 @@ public class LocationController {
     private final AppUserRepository appUserRepository;
     private final LocationService locationService;
 
-    @GetMapping(path = "/me")
-    public Mono<ResponseEntity<?>> getMe(@AuthenticationPrincipal AppUser appUser) {
-        return Mono.just(ResponseEntity.status(HttpStatus.ACCEPTED).body(appUser));
-    }
-//
-//    @GetMapping(path = "/all")
-//    public Flux<AppUser> getAll() {
-//        return appUserRepository.findAll();
-//    }
-
     @PostMapping(path = "/create")
     public ResponseEntity<?> createLocation(@AuthenticationPrincipal AppUser appUser, @RequestBody CreateLocationRequest request) {
         Location location = locationService.create(appUser, request);
@@ -50,5 +40,10 @@ public class LocationController {
     @GetMapping(path = "/{user_id}")
     public Flux<Location> getAllUserLocations(@PathVariable(value = "user_id") Long user_id) {
         return locationService.getUserLocationList(user_id);
+    }
+
+    @GetMapping(path = "/users/{locationId}")
+    public Flux<AppUser> getAllUsersWithLocation(@PathVariable(value = "locationId") Long locationId) {
+        return locationService.getUsersWithLocation(locationId);
     }
 }
