@@ -3,7 +3,6 @@ package com.example.itspartnertest.controller.registration;
 import com.example.itspartnertest.appuser.AppUser;
 import com.example.itspartnertest.appuser.AppUserRepository;
 import com.example.itspartnertest.model.dto.RegistrationRequest;
-import com.example.itspartnertest.service.registration.BasicRegistrationService;
 import com.example.itspartnertest.service.registration.RegistrationService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
