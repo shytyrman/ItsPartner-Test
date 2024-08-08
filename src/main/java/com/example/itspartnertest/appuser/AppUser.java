@@ -2,6 +2,7 @@ package com.example.itspartnertest.appuser;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
@@ -16,6 +17,7 @@ import java.util.Collections;
 @Getter
 @Setter
 @EqualsAndHashCode
+@NoArgsConstructor
 public class AppUser implements UserDetails{
 
     @Id
